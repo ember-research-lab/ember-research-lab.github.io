@@ -237,6 +237,34 @@
       max-width: 640px;
     }
 
+    .intro-nudge {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      padding: 18px 22px;
+      margin-bottom: 40px;
+      max-width: 640px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--ember);
+      border-radius: 2px;
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+
+    .intro-nudge-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ember);
+    }
+
+    .intro-nudge .link-arrow {
+      font-size: 13px;
+    }
+
     h2 {
       font-size: 22px;
       font-weight: 400;
@@ -579,6 +607,13 @@
   </header>
 
   <article>
+    <div class="intro-nudge">
+      <span class="intro-nudge-label">New here?</span>
+      Start with the essay
+      <a href="blank-slate.html" class="link-arrow">The Blank Slate Is the Gift</a>
+      — a non-technical 10-minute read.
+    </div>
+
     <p>
       The alignment problem is mislocated. Current approaches either constrain capable systems externally
       (simulated stakes via RLHF) or propose giving AI genuine self-interest (real stakes via embodiment).
