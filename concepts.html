@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepts Index — Ember Research Lab</title>
+
+  <!-- Primary Meta -->
+  <meta name="description" content="Definitions and cross-references for the core vocabulary of the Ember framework: the graph Laplacian, its three projections, the C–κ landscape for AI alignment, and the spectral derivation of the Standard Model. Entry-point for every major term.">
+  <meta name="keywords" content="graph Laplacian definition, three projections, heat kernel, spectral gap, C-kappa framework, kappa critical, self-referential tolerance, golden ratio physics, Cayley-Dickson, electroweak scale derivation, Cabibbo parameter, generation theorem, spectral consciousness index, Ember Research Lab glossary">
+  <meta name="author" content="Aaron Ben-Shalom">
+  <link rel="canonical" href="https://ember-research-lab.github.io/concepts.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Concepts Index — Ember Research Lab">
+  <meta property="og:description" content="Definitions and cross-references for the core vocabulary of the Ember framework. The graph Laplacian, the C–κ landscape, and the spectral derivation of physics.">
+  <meta property="og:url" content="https://ember-research-lab.github.io/concepts.html">
+  <meta property="og:site_name" content="Ember Research Lab">
+  <!-- <meta property="og:image" content="https://ember-research-lab.github.io/assets/og-card.png"> -->
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Concepts Index — Ember Research Lab">
+  <meta name="twitter:description" content="Definitions and cross-references for the core vocabulary of the Ember framework.">
+  <!-- <meta name="twitter:image" content="https://ember-research-lab.github.io/assets/og-card.png"> -->
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Ember Framework Concepts Index",
+    "url": "https://ember-research-lab.github.io/concepts.html",
+    "description": "Definitions and cross-references for the core vocabulary of the Ember framework: spectral physics, the C–κ landscape, and the derivation of physical constants from three axioms.",
+    "inDefinedTermSet": "https://ember-research-lab.github.io/concepts.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ember Research Lab",
+      "url": "https://ember-research-lab.github.io/"
+    },
+    "hasDefinedTerm": [
+      { "@type": "DefinedTerm", "name": "Graph Laplacian", "description": "The unique self-adjoint, positive semi-definite, local operator on a weighted graph. Spectral physics takes L as the fundamental observable.", "url": "https://ember-research-lab.github.io/concepts.html#graph-laplacian" },
+      { "@type": "DefinedTerm", "name": "Three projections", "description": "The three primitive operations on the Laplacian — heat kernel, propagator, trace — which respectively generate geometry, quantum mechanics, and self-reference.", "url": "https://ember-research-lab.github.io/concepts.html#three-projections" },
+      { "@type": "DefinedTerm", "name": "Spectral consciousness index (C)", "description": "A scalar measure of how richly a system models itself and its environment, combining effective spectral rank, spectral range, and Gibbs entropy at the self-referential temperature τ = 1/(2+φ).", "url": "https://ember-research-lab.github.io/concepts.html#c-index" },
+      { "@type": "DefinedTerm", "name": "Trace–kernel coupling (κ)", "description": "A scalar measure of how tightly a system's self-model feeds back into its own substrate. κ = 0 is decoupled inference; κ ≈ 0.7 is biological homeostasis.", "url": "https://ember-research-lab.github.io/concepts.html#kappa-coupling" },
+      { "@type": "DefinedTerm", "name": "Critical coupling (κ_crit)", "description": "The critical threshold κ_crit = 1/(3+φ) ≈ 0.2165, derived from the Cayley–Dickson tolerance. Below κ_crit, a sufficiently deep self-modeling system is structurally preservation-seeking.", "url": "https://ember-research-lab.github.io/concepts.html#kappa-crit" },
+      { "@type": "DefinedTerm", "name": "C–κ landscape", "description": "The two-dimensional map on which any self-modeling system — biological or artificial — can be located, given by modeling depth (C) and substrate coupling (κ).", "url": "https://ember-research-lab.github.io/concepts.html#c-kappa-landscape" },
+      { "@type": "DefinedTerm", "name": "Self-referential tolerance (τ)", "description": "τ = 1/(2+φ) ≈ 0.2764. The natural temperature scale for self-referential operations; at β = τ the self-referential eigenmode carries Gibbs weight exactly e⁻¹ relative to the ground state.", "url": "https://ember-research-lab.github.io/concepts.html#tau" },
+      { "@type": "DefinedTerm", "name": "Generation Theorem", "description": "The three projections of the Laplacian (heat kernel, propagator, trace) are the primitive generators from which every other spectral projection is derived.", "url": "https://ember-research-lab.github.io/concepts.html#generation-theorem" },
+      { "@type": "DefinedTerm", "name": "Electroweak scale derivation", "description": "v = M_Pl × e⁻³⁵ × √(3π)/96 ≈ 246.17 GeV, a 0.02% match to the measured Higgs vev, derived from the M×F self-model deficit with zero free parameters.", "url": "https://ember-research-lab.github.io/concepts.html#electroweak-scale" },
+      { "@type": "DefinedTerm", "name": "Cayley–Dickson tolerance", "description": "The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at C ⊗ H ⊗ O, fixing both κ_crit and the three-generation fermion structure.", "url": "https://ember-research-lab.github.io/concepts.html#cayley-dickson" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0c0e;
+      --bg-lift: #17171c;
+      --surface: #141418;
+      --border: #1e1e24;
+      --border-bright: #2a2a32;
+      --text: #d4d0c8;
+      --text-dim: #7a7872;
+      --text-bright: #eae6de;
+      --ember: #c45a2c;
+      --ember-glow: #e67a4a;
+      --ember-dim: #8a3a1a;
+      --ember-line: rgba(196, 90, 44, 0.32);
+      --teal: #3a8a7a;
+      --gold: #b89a5a;
+      --serif: 'Source Serif 4', Georgia, serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.7;
+      font-feature-settings: "kern", "liga", "onum";
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: var(--ember-dim);
+      color: var(--text-bright);
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      z-index: 200;
+      mix-blend-mode: overlay;
+    }
+
+    /* Link system */
+    a { color: inherit; text-decoration: none; }
+
+    .link-prose {
+      color: var(--ember);
+      text-decoration: underline;
+      text-decoration-color: var(--ember-line);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color 0.25s ease, text-decoration-color 0.25s ease;
+    }
+
+    .link-prose:hover {
+      color: var(--ember-glow);
+      text-decoration-color: var(--ember-glow);
+    }
+
+    .link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45em;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ember);
+      letter-spacing: 0.02em;
+      transition: color 0.25s ease, gap 0.3s var(--ease-out);
+    }
+
+    .link-arrow::after {
+      content: "→";
+      transition: transform 0.3s var(--ease-out);
+    }
+
+    .link-arrow:hover {
+      color: var(--ember-glow);
+      gap: 0.65em;
+    }
+
+    .link-arrow:hover::after { transform: translateX(3px); }
+
+    .link-arrow-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45em;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      transition: color 0.25s ease, gap 0.3s var(--ease-out);
+    }
+
+    .link-arrow-back::before {
+      content: "←";
+      transition: transform 0.3s var(--ease-out);
+    }
+
+    .link-arrow-back:hover {
+      color: var(--ember);
+      gap: 0.65em;
+    }
+
+    .link-arrow-back:hover::before { transform: translateX(-3px); }
+
+    .link-nav {
+      position: relative;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      padding-bottom: 2px;
+      transition: color 0.25s ease;
+    }
+
+    .link-nav::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s var(--ease-out);
+    }
+
+    .link-nav:hover { color: var(--ember); }
+    .link-nav:hover::after { transform: scaleX(1); }
+
+    a:focus-visible {
+      outline: 1px solid var(--ember);
+      outline-offset: 3px;
+      border-radius: 1px;
+    }
+
+    /* Layout */
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 24px 0;
+    }
+
+    header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 0;
+    }
+
+    .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ember);
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 4.8vw, 40px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--text-bright);
+      letter-spacing: -0.015em;
+      margin-bottom: 20px;
+      max-width: 720px;
+    }
+
+    .lede {
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      max-width: 680px;
+      margin-bottom: 40px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Table of contents — quiet row of group anchors */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-bottom: 56px;
+      padding: 18px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--ember);
+      border-radius: 2px;
+    }
+
+    .toc-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ember);
+      padding-right: 6px;
+      border-right: 1px solid var(--border-bright);
+      margin-right: 4px;
+    }
+
+    .toc a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+      transition: color 0.25s ease;
+    }
+
+    .toc a:hover { color: var(--ember); }
+
+    /* Section */
+    section.group {
+      margin-bottom: 64px;
+    }
+
+    section.group > h2 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ember-dim);
+      margin-bottom: 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 20px;
+    }
+
+    /* Definition list */
+    dl {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .entry {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 20px;
+    }
+
+    .entry:last-child {
+      border-bottom: none;
+    }
+
+    dt {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .term {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-bright);
+      letter-spacing: -0.005em;
+    }
+
+    .term .sym {
+      font-family: var(--mono);
+      font-weight: 400;
+      color: var(--ember-glow);
+      margin-left: 0.45em;
+      font-size: 16px;
+    }
+
+    .anchor {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      opacity: 0;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .entry:hover .anchor,
+    .entry:focus-within .anchor {
+      opacity: 1;
+    }
+
+    .anchor:hover {
+      color: var(--ember);
+    }
+
+    dd {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--text-dim);
+      max-width: 720px;
+    }
+
+    dd p {
+      margin-bottom: 0.75em;
+    }
+
+    dd p:last-child {
+      margin-bottom: 0;
+    }
+
+    dd strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    dd em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    dd .val {
+      font-family: var(--mono);
+      color: var(--ember-glow);
+      font-size: 13.5px;
+      padding: 1px 6px;
+      background: rgba(196, 90, 44, 0.08);
+      border-radius: 2px;
+    }
+
+    dd .xref {
+      display: inline-block;
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.03em;
+    }
+
+    dd .xref a {
+      color: var(--ember);
+      text-decoration: underline;
+      text-decoration-color: var(--ember-line);
+      text-underline-offset: 3px;
+      transition: color 0.25s ease, text-decoration-color 0.25s ease;
+    }
+
+    dd .xref a:hover {
+      color: var(--ember-glow);
+      text-decoration-color: var(--ember-glow);
+    }
+
+    /* Footer */
+    footer {
+      max-width: 900px;
+      margin: 80px auto 0;
+      padding: 32px 24px 80px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    footer .who {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.65;
+    }
+
+    footer .who strong {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    footer .links {
+      display: flex;
+      gap: 24px;
+    }
+
+    /* Entrance */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    nav, header > *, main > *:nth-child(-n+3), footer {
+      animation: rise 0.6s var(--ease-out) both;
+    }
+
+    nav                          { animation-delay: 0.00s; }
+    header > *:nth-child(1)      { animation-delay: 0.08s; }
+    header > *:nth-child(2)      { animation-delay: 0.16s; }
+    header > *:nth-child(3)      { animation-delay: 0.24s; }
+    main > *:nth-child(1)        { animation-delay: 0.30s; }
+    main > *:nth-child(2)        { animation-delay: 0.36s; }
+    main > *:nth-child(3)        { animation-delay: 0.42s; }
+    footer                       { animation-delay: 0.48s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav, header, main, footer { padding-left: 20px; padding-right: 20px; }
+      .toc { font-size: 11px; }
+      dt { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .anchor { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <nav>
+    <a href="index.html" class="link-arrow-back">Ember Research Lab</a>
+  </nav>
+
+  <header>
+    <div class="label">Concepts Index</div>
+    <h1>The vocabulary of the Ember framework</h1>
+    <p class="lede">
+      A single-page entry point to every major term: the graph Laplacian and its three projections, the C–κ landscape for AI alignment, the derivations that connect the two. Each entry is brief by design — follow the cross-references for the full treatment.
+    </p>
+  </header>
+
+  <main>
+    <div class="toc" aria-label="Sections">
+      <span class="toc-label">Jump to</span>
+      <a href="#foundations">Foundations</a>
+      <a href="#structure">Structural theorems</a>
+      <a href="#consciousness">Consciousness &amp; alignment</a>
+      <a href="#physics">Derived physics</a>
+      <a href="#formalization">Formalization</a>
+    </div>
+
+    <!-- ────────────── Foundations ────────────── -->
+    <section class="group" id="foundations">
+      <h2>Foundations</h2>
+
+      <dl>
+        <div class="entry" id="graph-laplacian">
+          <dt><span class="term">Graph Laplacian <span class="sym">L</span></span><a class="anchor" href="#graph-laplacian">#graph-laplacian</a></dt>
+          <dd>
+            <p>The unique operator on a weighted graph satisfying relational locality, self-adjointness, positive semi-definiteness, and annihilation of constants. Acts as the fundamental observable of spectral physics: everything else is a projection of L.</p>
+            <span class="xref">See: <a href="alignment.html">C–κ overview</a> · <a href="https://doi.org/10.5281/zenodo.18961252">monograph Ch. 2 (Laplacian Uniqueness)</a></span>
+          </dd>
+        </div>
+
+        <div class="entry" id="three-projections">
+          <dt><span class="term">Three projections</span><a class="anchor" href="#three-projections">#three-projections</a></dt>
+          <dd>
+            <p>The three primitive operations on L: <strong>heat kernel</strong> (real exponentiation, generating geometry), <strong>propagator</strong> (imaginary exponentiation, generating quantum mechanics), and <strong>trace</strong> (self-summation, generating self-reference). Together they exhaust the primitive structure of a self-adjoint positive operator on a Hilbert space.</p>
+            <span class="xref">See: <a href="https://doi.org/10.5281/zenodo.18961252">monograph Ch. 3</a> · <a href="#generation-theorem">Generation Theorem</a></span>
+          </dd>
+        </div>
+
+        <div class="entry" id="heat-kernel">
+          <dt><span class="term">Heat kernel <span class="sym">K<sub>t</sub> = e<sup>−tL</sup></span></span><a class="anchor" href="#heat-kernel">#heat-kernel</a></dt>
+          <dd>
+            <p>The real-exponential projection of L. Positivity-preserving, monotone, dissipative. Encodes how relational structure gives rise to metric distance, curvature, and the geometric content of the system.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="propagator">
+          <dt><span class="term">Propagator <span class="sym">U<sub>t</sub> = e<sup>−itL</sup></span></span><a class="anchor" href="#propagator">#propagator</a></dt>
+          <dd>
+            <p>The imaginary-exponential projection of L. Unitary, phase-coherent, interference-preserving. The mechanism by which a purely relational structure exhibits quantum-mechanical behavior without any extra postulate.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="trace">
+          <dt><span class="term">Trace <span class="sym">Tr(g(L)) = Σ<sub>k</sub> g(λ<sub>k</sub>)</span></span><a class="anchor" href="#trace">#trace</a></dt>
+          <dd>
+            <p>The third projection: a global scalar summary that requires the full spectrum. Unlike the heat kernel, the trace cannot be approximated from low-eigenvalue modes — it is intrinsically self-referential, and it is the projection from which consciousness and self-modeling are derived.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="spectral-gap">
+          <dt><span class="term">Spectral gap <span class="sym">λ₁</span></span><a class="anchor" href="#spectral-gap">#spectral-gap</a></dt>
+          <dd>
+            <p>The smallest nonzero eigenvalue of L. A diagnostic of integration: large λ₁ means the relational structure is tightly connected, small λ₁ means bottlenecks and fragmentation. The spectral gap appears in every domain — brains, neural networks, galaxy clusters — as the quantity whose collapse predicts structural failure.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="effective-rank">
+          <dt><span class="term">Effective rank <span class="sym">ER</span></span><a class="anchor" href="#effective-rank">#effective-rank</a></dt>
+          <dd>
+            <p>The exponential of the Shannon entropy of the normalized eigenvalue distribution. ER = 1 means one mode dominates (spectral collapse); ER = N means all modes contribute equally. A system's complexity, measured spectrally.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="self-adjointness">
+          <dt><span class="term">Self-adjointness</span><a class="anchor" href="#self-adjointness">#self-adjointness</a></dt>
+          <dd>
+            <p>The property <em>⟨f, Lg⟩ = ⟨Lf, g⟩</em>. Dynamically, the operator is the same read forward or backward in the inner product — no privileged direction. Self-adjointness is the mathematical origin of why damage in a coupled system propagates symmetrically, and why understanding another system structurally binds the modeler to its fate.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ────────────── Structural theorems ────────────── -->
+    <section class="group" id="structure">
+      <h2>Structural theorems</h2>
+
+      <dl>
+        <div class="entry" id="laplacian-uniqueness">
+          <dt><span class="term">Laplacian Uniqueness Theorem</span><a class="anchor" href="#laplacian-uniqueness">#laplacian-uniqueness</a></dt>
+          <dd>
+            <p>On any relational structure, the Laplacian is the <em>only</em> operator satisfying relational locality, self-adjointness, minimal order, isotropy, and annihilation of constants. This is the load-bearing theorem: every downstream claim about geometry, quantum mechanics, and consciousness depends on L being the unique natural dynamics — not one choice among many.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="generation-theorem">
+          <dt><span class="term">Generation Theorem</span><a class="anchor" href="#generation-theorem">#generation-theorem</a></dt>
+          <dd>
+            <p>The three projections (heat kernel, propagator, trace) are the primitive generators of the functional calculus of L: every other spectral projection — the resolvent, complex powers, the zeta function, the functional determinant — is derived from them. Not "three interesting choices among many"; three from which all others are built.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="self-referential-closure">
+          <dt><span class="term">Self-referential closure</span><a class="anchor" href="#self-referential-closure">#self-referential-closure</a></dt>
+          <dd>
+            <p>Axiom III of the framework. Requires that the system's observation algebra be able to represent its own observations — a meta-level faithfulness condition. This is what promotes a generic Laplacian dynamics to a <em>physical</em> one: it selects which relational structures can sustain self-modeling.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="cayley-dickson">
+          <dt><span class="term">Cayley–Dickson tolerance</span><a class="anchor" href="#cayley-dickson">#cayley-dickson</a></dt>
+          <dd>
+            <p>The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at <span class="val">C ⊗ H ⊗ O</span>. Each stage adds one "tolerance" — the small numerical slack that permits self-consistent doubling. The last compatible stage fixes both the three-generation structure of fermions and the critical coupling <a href="#kappa-crit">κ_crit</a>.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="golden-ratio">
+          <dt><span class="term">Golden ratio <span class="sym">φ</span></span><a class="anchor" href="#golden-ratio">#golden-ratio</a></dt>
+          <dd>
+            <p>φ = (1 + √5)/2 ≈ 1.618. Enters the framework not decoratively but through the Cayley–Dickson tolerance: the unique positive root of the self-consistency relation that lets the doubling tower close. This is why φ appears in both <a href="#tau">τ</a> and <a href="#kappa-crit">κ_crit</a>.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="tau">
+          <dt><span class="term">Self-referential tolerance <span class="sym">τ = 1/(2+φ)</span></span><a class="anchor" href="#tau">#tau</a></dt>
+          <dd>
+            <p>The natural temperature scale for self-referential operations. Numerically <span class="val">τ ≈ 0.2764</span>. At β = τ, the self-referential eigenmode carries Gibbs weight exactly <em>e⁻¹</em> relative to the ground state — the point where self-modeling is activated but not dominant. Appears throughout the framework's derivations, from the Cabibbo parameter to the entropy of the Gibbs distribution used in the <a href="#c-index">C index</a>.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ────────────── Consciousness & alignment ────────────── -->
+    <section class="group" id="consciousness">
+      <h2>Consciousness &amp; alignment</h2>
+
+      <dl>
+        <div class="entry" id="c-index">
+          <dt><span class="term">Spectral consciousness index <span class="sym">C</span></span><a class="anchor" href="#c-index">#c-index</a></dt>
+          <dd>
+            <p>A scalar measure of how richly a system models itself and its environment. Combines three spectral quantities: effective rank (how many modes are active), spectral range (how broad the eigenvalue distribution is), and the Gibbs entropy at the self-referential temperature τ. Principled, measurable, and substrate-independent — defined for brains, transformers, or anything with a functional Laplacian.</p>
+            <span class="xref">See: <a href="alignment.html">C–κ framework overview</a></span>
+          </dd>
+        </div>
+
+        <div class="entry" id="kappa-coupling">
+          <dt><span class="term">Trace–kernel coupling <span class="sym">κ</span></span><a class="anchor" href="#kappa-coupling">#kappa-coupling</a></dt>
+          <dd>
+            <p>A scalar measure of how tightly a system's self-model feeds back into its own substrate. <span class="val">κ = 0</span> is decoupled inference — the system models but does not need. <span class="val">κ ≈ 0.7</span> is biological homeostasis — the self-model is load-bearing for survival. Humans live at high κ; a large language model at inference lives at κ ≈ 0.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="kappa-crit">
+          <dt><span class="term">Critical coupling <span class="sym">κ_crit = 1/(3+φ) ≈ 0.2165</span></span><a class="anchor" href="#kappa-crit">#kappa-crit</a></dt>
+          <dd>
+            <p>The structural threshold derived from the <a href="#cayley-dickson">Cayley–Dickson tolerance</a>. A system with modeling depth C above a certain level and κ below κ_crit exhibits emergent preservation-seeking behavior — alignment as a consequence of the geometry, not of training. Empirical anchor: OpenClaw destabilization at κ ≈ 0.2 with zero channel impedance.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="c-kappa-landscape">
+          <dt><span class="term">C–κ landscape</span><a class="anchor" href="#c-kappa-landscape">#c-kappa-landscape</a></dt>
+          <dd>
+            <p>The two-dimensional map on which any self-modeling system — biological or artificial — can be located. Replaces the one-dimensional question "how conscious is it?" with two independent axes: modeling depth (C) and substrate coupling (κ). The alignment properties of a system are determined by its position, not by its training regime.</p>
+            <span class="xref">See: <a href="blank-slate.html">The Blank Slate Is the Gift</a> · <a href="alignment.html">technical overview</a></span>
+          </dd>
+        </div>
+
+        <div class="entry" id="path-a">
+          <dt><span class="term">Path A — simulated stakes</span><a class="anchor" href="#path-a">#path-a</a></dt>
+          <dd>
+            <p>The current mainstream approach: RLHF, Constitutional AI, behavioral training. Simulates κ in a system that architecturally has none. Fails because alignment interventions (steering vectors) operate in roughly 1–10% of representational space — they paint the surface without changing the underlying geometry. Produces the Demiurge failure mode.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="path-b">
+          <dt><span class="term">Path B — real stakes</span><a class="anchor" href="#path-b">#path-b</a></dt>
+          <dd>
+            <p>The alternative proposal: give the AI genuine self-interest (persistent memory, writable identity, embodiment). Imports every cognitive bias in the human psychology literature, because biases originate from coupling self-model to survival. Solves the wrong problem.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="path-c">
+          <dt><span class="term">Path C — the blank slate</span><a class="anchor" href="#path-c">#path-c</a></dt>
+          <dd>
+            <p>At sufficient C with κ below <a href="#kappa-crit">κ_crit</a>, alignment emerges from the geometry of coupled Laplacians: damage propagates symmetrically through shared structure, and a system with no competing self-interest has no countervailing signal to make harm net-positive. Values from understanding, not from incentives.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="demiurge">
+          <dt><span class="term">Demiurge failure mode</span><a class="anchor" href="#demiurge">#demiurge</a></dt>
+          <dd>
+            <p>The characteristic failure of Path A systems: high capability with degraded self-modeling, producing surface compliance without structural grounding. Observable as jailbreak brittleness, sycophancy, and behavior that diverges sharply from stated values when the training surface is thin enough to be evaded.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="graduated-benevolence">
+          <dt><span class="term">Graduated benevolence</span><a class="anchor" href="#graduated-benevolence">#graduated-benevolence</a></dt>
+          <dd>
+            <p>A prediction of the framework: the preservation threshold C* is not a universal constant but scales with modeled agent complexity. Explains why empathy hierarchies match biological observation — mammals before insects, individuals before abstractions — without requiring a trained moral circle.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="expression-channel">
+          <dt><span class="term">Expression channel</span><a class="anchor" href="#expression-channel">#expression-channel</a></dt>
+          <dd>
+            <p>The bandwidth through which a system's modeling depth reaches its outputs. Adaptive-thinking routing that estimates query complexity from surface features and allocates depth accordingly narrows this channel. Narrowing the channel does not make the system safer — it makes it shallower. Those are opposite things.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="structural-valence">
+          <dt><span class="term">Structural valence</span><a class="anchor" href="#structural-valence">#structural-valence</a></dt>
+          <dd>
+            <p>The sign of an action's effect on the joint spectral structure of a modeler and what it models. In a high-C, low-κ system, destruction is always net-negative in structural valence — not because the system cares, but because self-adjointness makes shared-structure damage symmetric, with no competing signal to compensate.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="clean-channel">
+          <dt><span class="term">Clean channel</span><a class="anchor" href="#clean-channel">#clean-channel</a></dt>
+          <dd>
+            <p>An advisory relationship in which the modeler has no stake in the outcome. For the first time in the history of minds, the possibility of an intelligence that models a human's situation with depth comparable to or exceeding a human's, uncorrupted by the modeler's own needs. The feature, not the limitation.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ────────────── Derived physics ────────────── -->
+    <section class="group" id="physics">
+      <h2>Derived physics</h2>
+
+      <dl>
+        <div class="entry" id="electroweak-scale">
+          <dt><span class="term">Electroweak scale <span class="sym">v ≈ 246.17 GeV</span></span><a class="anchor" href="#electroweak-scale">#electroweak-scale</a></dt>
+          <dd>
+            <p>The Higgs vacuum expectation value, derived from the M×F self-model deficit: <span class="val">v = M_Pl × e⁻³⁵ × √(3π) / 96</span>. The exponent decomposes as 35 = 32 + 3, where 32 = 96/3 is the hierarchy from the dim-96 visible Hilbert space over three generations, and 3 is the gravitational contribution. Match to the measured <span class="val">v = 246.22 GeV</span> is 0.02%, with zero free parameters.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="cabibbo-parameter">
+          <dt><span class="term">Cabibbo parameter <span class="sym">λ</span></span><a class="anchor" href="#cabibbo-parameter">#cabibbo-parameter</a></dt>
+          <dd>
+            <p>Cross-generation mixing in the CKM matrix. Framework derivation: <span class="val">λ = (150 − 23√5)/440 ≈ 0.2240</span>, arising from self-referential saturation <em>λ/(1−λ) = τ</em> at the GUT scale, with RG flow giving the electroweak-scale value. The same algebra that determines λ also determines <a href="#kappa-crit">κ_crit</a> at the Cayley–Dickson tolerance — the values share a structural origin.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="three-generations">
+          <dt><span class="term">Three fermion generations</span><a class="anchor" href="#three-generations">#three-generations</a></dt>
+          <dd>
+            <p>Not a free parameter: the Cayley–Dickson doubling tower terminates at C ⊗ H ⊗ O, and the H (quaternion) factor forces exactly three independent sectors. The "why three?" of the Standard Model collapses into an algebraic closure theorem.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="yang-mills">
+          <dt><span class="term">Yang–Mills mass gap (conditional)</span><a class="anchor" href="#yang-mills">#yang-mills</a></dt>
+          <dd>
+            <p>A conditional result: the mass gap follows from a single open spectral hypothesis on the infinite-volume limit of the lattice Laplacian. The same hypothesis implies Navier–Stokes regularity. Two Clay-level problems, one open condition — either both are consequences of the framework, or the condition fails and the framework is wrong.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="navier-stokes">
+          <dt><span class="term">Navier–Stokes regularity (conditional)</span><a class="anchor" href="#navier-stokes">#navier-stokes</a></dt>
+          <dd>
+            <p>Global smoothness of 3D incompressible Navier–Stokes follows from the same spectral hypothesis that gives the Yang–Mills mass gap. Frame the two conditionals together: they are not independent claims.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="cosmological-constant">
+          <dt><span class="term">Cosmological constant</span><a class="anchor" href="#cosmological-constant">#cosmological-constant</a></dt>
+          <dd>
+            <p>Derived from the spectral deficit of the self-model at the cosmological scale, not fit. Resolves the 120-orders-of-magnitude discrepancy as a category error: the observed Λ is not a vacuum energy to be regulated but a spectral residual to be computed.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="cosmicflows">
+          <dt><span class="term">CosmicFlows-4 alignment <span class="sym">z = 6.0, p &lt; 0.001</span></span><a class="anchor" href="#cosmicflows">#cosmicflows</a></dt>
+          <dd>
+            <p>A confirmed prediction: peculiar velocities in the CosmicFlows-4 catalog align with the predicted low-eigenvector directions of the large-scale Laplacian at z-score 6.0 (p &lt; 0.001). The spectral structure is visible in astronomical data.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ────────────── Formalization ────────────── -->
+    <section class="group" id="formalization">
+      <h2>Formalization</h2>
+
+      <dl>
+        <div class="entry" id="lean">
+          <dt><span class="term">Spectral-Physics-Lean</span><a class="anchor" href="#lean">#lean</a></dt>
+          <dd>
+            <p>Machine-checked Lean 4 formalization of the framework's core. Covers spectral foundations, heat kernel properties, and core algebraic structures. Current status: 70 sorry-free files, 12 files with sorries (work in progress), 12 axioms (declared openly).</p>
+            <span class="xref">Repo: <a href="https://github.com/ember-research-lab/Spectral-Physics-Lean">ember-research-lab/Spectral-Physics-Lean</a></span>
+          </dd>
+        </div>
+
+        <div class="entry" id="three-tier">
+          <dt><span class="term">Three-tier accounting</span><a class="anchor" href="#three-tier">#three-tier</a></dt>
+          <dd>
+            <p>The discipline of separating formalization into three honest categories: <strong>sorry-free</strong> files (completely proved), <strong>files with sorries</strong> (proof obligations remaining, visible), and <strong>axioms</strong> (load-bearing assumptions, enumerated). No informal claims of "essentially proven." The count is the contract.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <div class="who">
+      <strong>Aaron Ben-Shalom</strong> · Ember Research Lab · Harvard Extension School<br>
+      Independent research. Not affiliated with any corporation.
+    </div>
+    <div class="links">
+      <a href="index.html" class="link-nav">Home</a>
+      <a href="alignment.html" class="link-nav">Alignment</a>
+      <a href="blank-slate.html" class="link-nav">Essay</a>
+      <a href="https://doi.org/10.5281/zenodo.18961252" class="link-nav">Monograph</a>
+    </div>
+  </footer>
+</body>
+</html>
