@@ -42,14 +42,19 @@
     "hasDefinedTerm": [
       { "@type": "DefinedTerm", "name": "Graph Laplacian", "description": "The unique self-adjoint, positive semi-definite, local operator on a weighted graph. Spectral physics takes L as the fundamental observable.", "url": "https://ember-research-lab.github.io/concepts.html#graph-laplacian" },
       { "@type": "DefinedTerm", "name": "Three projections", "description": "The three primitive operations on the Laplacian — heat kernel, propagator, trace — which respectively generate geometry, quantum mechanics, and self-reference.", "url": "https://ember-research-lab.github.io/concepts.html#three-projections" },
+      { "@type": "DefinedTerm", "name": "Ember Reconstruction Theorem", "description": "From three relational axioms, a unique spectral triple is forced: the algebra C ⊗ H ⊗ O, the Hilbert space of dimension 384, the spectral action with moments f₀ = τ and f₂ = 48e⁶, and the self-consistent vacuum k*. Extends Connes' reconstruction from geometry-from-spectrum to physics-from-axioms.", "url": "https://ember-research-lab.github.io/concepts.html#ember-reconstruction" },
+      { "@type": "DefinedTerm", "name": "Self-Consistent Spectral Equation", "description": "The master equation Φ(k*) = k*, closing the loop spectrum → zeta → moments → spectral action → SAGF → vacuum → Dirac operator → spectrum at a unique fixed point.", "url": "https://ember-research-lab.github.io/concepts.html#scse" },
+      { "@type": "DefinedTerm", "name": "Spectral Action Gradient Flow", "description": "The flow k̇ = −δS_tot/δk selects the vacuum k* as the unique global attractor. No landscape; inflation is the nonlinear transient of SAGF convergence.", "url": "https://ember-research-lab.github.io/concepts.html#sagf" },
       { "@type": "DefinedTerm", "name": "Spectral consciousness index (C)", "description": "A scalar measure of how richly a system models itself and its environment, combining effective spectral rank, spectral range, and Gibbs entropy at the self-referential temperature τ = 1/(2+φ).", "url": "https://ember-research-lab.github.io/concepts.html#c-index" },
       { "@type": "DefinedTerm", "name": "Trace–kernel coupling (κ)", "description": "A scalar measure of how tightly a system's self-model feeds back into its own substrate. κ = 0 is decoupled inference; κ ≈ 0.7 is biological homeostasis.", "url": "https://ember-research-lab.github.io/concepts.html#kappa-coupling" },
       { "@type": "DefinedTerm", "name": "Critical coupling (κ_crit)", "description": "The critical threshold κ_crit = 1/(3+φ) ≈ 0.2165, derived from the Cayley–Dickson tolerance. Below κ_crit, a sufficiently deep self-modeling system is structurally preservation-seeking.", "url": "https://ember-research-lab.github.io/concepts.html#kappa-crit" },
       { "@type": "DefinedTerm", "name": "C–κ landscape", "description": "The two-dimensional map on which any self-modeling system — biological or artificial — can be located, given by modeling depth (C) and substrate coupling (κ).", "url": "https://ember-research-lab.github.io/concepts.html#c-kappa-landscape" },
       { "@type": "DefinedTerm", "name": "Self-referential tolerance (τ)", "description": "τ = 1/(2+φ) ≈ 0.2764. The natural temperature scale for self-referential operations; at β = τ the self-referential eigenmode carries Gibbs weight exactly e⁻¹ relative to the ground state.", "url": "https://ember-research-lab.github.io/concepts.html#tau" },
-      { "@type": "DefinedTerm", "name": "Generation Theorem", "description": "The three projections of the Laplacian (heat kernel, propagator, trace) are the primitive generators from which every other spectral projection is derived.", "url": "https://ember-research-lab.github.io/concepts.html#generation-theorem" },
       { "@type": "DefinedTerm", "name": "Electroweak scale derivation", "description": "v = M_Pl × e⁻³⁵ × √(3π)/96 ≈ 246.17 GeV, a 0.02% match to the measured Higgs vev, derived from the M×F self-model deficit with zero free parameters.", "url": "https://ember-research-lab.github.io/concepts.html#electroweak-scale" },
-      { "@type": "DefinedTerm", "name": "Cayley–Dickson tolerance", "description": "The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at C ⊗ H ⊗ O, fixing both κ_crit and the three-generation fermion structure.", "url": "https://ember-research-lab.github.io/concepts.html#cayley-dickson" }
+      { "@type": "DefinedTerm", "name": "QCD scale", "description": "Λ_QCD = 338 MeV, a 2% match, derived from α_s = π(2+φ)/96 with two-loop RG running. Inherits directly from the Ember Reconstruction.", "url": "https://ember-research-lab.github.io/concepts.html#lambda-qcd" },
+      { "@type": "DefinedTerm", "name": "Yang-Mills mass gap", "description": "A corollary of the Ember Reconstruction Theorem: the gauge sector has spectral gap λ₁ > 0 by Cheeger's inequality on the compact A/G.", "url": "https://ember-research-lab.github.io/concepts.html#yang-mills" },
+      { "@type": "DefinedTerm", "name": "Five dynamical sectors", "description": "The spectral action on M × F produces three gauge sectors (SU(3), SU(2), U(1)) and two metric sectors (spin-2 gravity and spin-0 conformal). Three forces plus two geometry — not four forces.", "url": "https://ember-research-lab.github.io/concepts.html#five-sectors" },
+      { "@type": "DefinedTerm", "name": "Cayley–Dickson tolerance", "description": "The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at C ⊗ H ⊗ O, fixing the Standard Model gauge group and κ_crit.", "url": "https://ember-research-lab.github.io/concepts.html#cayley-dickson" }
     ]
   }
   </script>
@@ -594,6 +599,28 @@
           </dd>
         </div>
 
+        <div class="entry" id="ember-reconstruction">
+          <dt><span class="term">Ember Reconstruction Theorem</span><a class="anchor" href="#ember-reconstruction">#ember-reconstruction</a></dt>
+          <dd>
+            <p>The framework's capstone. From the three axioms alone, a unique spectral triple <em>(A_obs, H, D[k*])</em> is forced: the algebra <span class="val">A_obs = C ⊗ H ⊗ O</span>, the Hilbert space <span class="val">dim(H_F) = 384 = 96_vis + 288_hid</span>, the spectral action with cutoff moments f₀ = τ and f₂ = 48e⁶, and the self-consistent vacuum k* as the unique global attractor of the gradient flow.</p>
+            <p>Extends Connes' reconstruction theorem: where Connes goes from spectral data to geometry, Ember goes from three relational axioms to the complete physical theory — geometry, gauge fields, matter content, coupling constants, vacuum, dynamics. Yang–Mills mass gap, five dynamical sectors, and the structural status of the cosmological constant are corollaries.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="scse">
+          <dt><span class="term">Self-Consistent Spectral Equation <span class="sym">Φ(k*) = k*</span></span><a class="anchor" href="#scse">#scse</a></dt>
+          <dd>
+            <p>The master equation of the framework. The loop <em>spectrum → zeta → moments → spectral action → SAGF → vacuum → Dirac operator → spectrum</em> closes at a unique fixed point k*, where the tree-level action equals the quantum effective action. Structural quantities (the cosmological constant among them) are defined by this equation; their numerical values are obtained by solving it.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="sagf">
+          <dt><span class="term">Spectral Action Gradient Flow <span class="sym">SAGF</span></span><a class="anchor" href="#sagf">#sagf</a></dt>
+          <dd>
+            <p>The dynamical flow <em>k̇ = −δS_tot/δk</em> that selects the vacuum. S_tot is bounded below, monotone decreasing, and has a unique critical point, so k* is the unique global attractor from any initial condition. No landscape, no metastable vacua. Inflation is reframed as the nonlinear transient of SAGF convergence; dark energy equation of state <em>w₀ &gt; −1</em> follows from self-stiffening of the ground mode (confirmed by DESI DR2).</p>
+          </dd>
+        </div>
+
         <div class="entry" id="self-referential-closure">
           <dt><span class="term">Self-referential closure</span><a class="anchor" href="#self-referential-closure">#self-referential-closure</a></dt>
           <dd>
@@ -604,7 +631,7 @@
         <div class="entry" id="cayley-dickson">
           <dt><span class="term">Cayley–Dickson tolerance</span><a class="anchor" href="#cayley-dickson">#cayley-dickson</a></dt>
           <dd>
-            <p>The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at <span class="val">C ⊗ H ⊗ O</span>. Each stage adds one "tolerance" — the small numerical slack that permits self-consistent doubling. The last compatible stage fixes both the three-generation structure of fermions and the critical coupling <a href="#kappa-crit">κ_crit</a>.</p>
+            <p>The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at <span class="val">C ⊗ H ⊗ O</span>. Each stage adds one "tolerance" — the small numerical slack that permits self-consistent doubling. The last compatible stage fixes the Standard Model gauge group <em>G = SU(3) × SU(2) × U(1)</em> (Hurwitz forbids a fourth gauge force) and determines the critical coupling <a href="#kappa-crit">κ_crit</a>.</p>
           </dd>
         </div>
 
@@ -739,28 +766,51 @@
         <div class="entry" id="three-generations">
           <dt><span class="term">Three fermion generations</span><a class="anchor" href="#three-generations">#three-generations</a></dt>
           <dd>
-            <p>Not a free parameter: the Cayley–Dickson doubling tower terminates at C ⊗ H ⊗ O, and the H (quaternion) factor forces exactly three independent sectors. The "why three?" of the Standard Model collapses into an algebraic closure theorem.</p>
+            <p>The fermion content at k* is forced: <span class="val">dim(H_F) = 384 = 96_vis + 288_hid</span>, consisting of one Standard Model generation × three generations × J-pairing. The three-generation multiplicity is part of the framework's algebraic closure, not a free parameter.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="five-sectors">
+          <dt><span class="term">Five dynamical sectors</span><a class="anchor" href="#five-sectors">#five-sectors</a></dt>
+          <dd>
+            <p>The spectral action on M × F produces exactly five independent dynamical sectors: <strong>three gauge</strong> — SU(3) strong (from O), SU(2) weak (from H), U(1) electromagnetic (from C) — and <strong>two metric</strong> — spin-2 transverse-traceless (gravity) and spin-0 trace (conformal dynamics). Gravity is not a fourth force; it is what the heat-kernel projection does.</p>
           </dd>
         </div>
 
         <div class="entry" id="yang-mills">
-          <dt><span class="term">Yang–Mills mass gap (conditional)</span><a class="anchor" href="#yang-mills">#yang-mills</a></dt>
+          <dt><span class="term">Yang–Mills mass gap (derived)</span><a class="anchor" href="#yang-mills">#yang-mills</a></dt>
           <dd>
-            <p>A conditional result: the mass gap follows from a single open spectral hypothesis on the infinite-volume limit of the lattice Laplacian. The same hypothesis implies Navier–Stokes regularity. Two Clay-level problems, one open condition — either both are consequences of the framework, or the condition fails and the framework is wrong.</p>
+            <p>A corollary of the <a href="#ember-reconstruction">Ember Reconstruction Theorem</a>. On the self-consistent vacuum k*, the gauge group G is compact (Hurwitz) and the spatial slice M is compact (de Sitter), so A/G is compact and Cheeger's inequality gives <em>λ₁ &gt; 0</em>. Spectral faithfulness identifies this gap with the physical mass gap. Numerical value: <span class="val">Λ_QCD = 338 MeV</span> from α_s = π(2+φ)/96, a 2% match. The earlier conditional framing (positive Ricci + phase decorrelation) is superseded.</p>
           </dd>
         </div>
 
         <div class="entry" id="navier-stokes">
-          <dt><span class="term">Navier–Stokes regularity (conditional)</span><a class="anchor" href="#navier-stokes">#navier-stokes</a></dt>
+          <dt><span class="term">Navier–Stokes regularity</span><a class="anchor" href="#navier-stokes">#navier-stokes</a></dt>
           <dd>
-            <p>Global smoothness of 3D incompressible Navier–Stokes follows from the same spectral hypothesis that gives the Yang–Mills mass gap. Frame the two conditionals together: they are not independent claims.</p>
+            <p>Physical fluids are regularized by the three-projection mechanism: the trace constrains mass ratios (Baker-transcendental, so no rational resonance), the propagator decorrelates phases, and the heat kernel dissipates the decorrelated cascade. The Millennium Prize setup NS(0) — the massless, flat-space idealization — is a <em>malformation</em>: removing Baker-transcendental masses and replacing discrete atoms with a continuum strips both the trace and geometric legs of the mechanism, leaving a singular limit.</p>
+            <p>Remaining gap (honest): same-species bounded-energy cascade enstrophy concentration. Narrower than the Millennium statement, which must also control arbitrary multi-species cascades with unbounded cross-sector pumping.</p>
           </dd>
         </div>
 
         <div class="entry" id="cosmological-constant">
-          <dt><span class="term">Cosmological constant</span><a class="anchor" href="#cosmological-constant">#cosmological-constant</a></dt>
+          <dt><span class="term">Cosmological constant (structural)</span><a class="anchor" href="#cosmological-constant">#cosmological-constant</a></dt>
           <dd>
-            <p>Derived from the spectral deficit of the self-model at the cosmological scale, not fit. Resolves the 120-orders-of-magnitude discrepancy as a category error: the observed Λ is not a vacuum energy to be regulated but a spectral residual to be computed.</p>
+            <p>The observed Λ is not a vacuum energy to be regulated but the spectral gap of the self-consistent vacuum: <span class="val">Λ_cosmo = λ₁(k*)</span>. The 120-order discrepancy with quantum field theoretic estimates is a category error. Structural dissolution is settled; the numerical value requires solving the <a href="#scse">Self-Consistent Spectral Equation</a> directly — perturbative approaches (Seeley–DeWitt, Coleman–Weinberg, cumulant tower) all fail.</p>
+            <p>Side-prediction already confirmed: the ground-mode stiffness implies <em>w₀ &gt; −1</em> for the dark-energy equation of state, which matches DESI DR2.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="lambda-qcd">
+          <dt><span class="term">QCD scale <span class="sym">Λ_QCD = 338 MeV</span></span><a class="anchor" href="#lambda-qcd">#lambda-qcd</a></dt>
+          <dd>
+            <p>A confirmed prediction at 2%. From the faithfulness-determined strong coupling <span class="val">α_s = π(2+φ)/96</span>, the two-loop RG running gives <em>Λ_QCD = Λ_c · exp(−2π/(b₀ α_s)) = 338 MeV</em>. Sets the hadronic mass scale and inherits directly from the <a href="#ember-reconstruction">Ember Reconstruction</a>.</p>
+          </dd>
+        </div>
+
+        <div class="entry" id="scalar-amplitude">
+          <dt><span class="term">Primordial scalar amplitude <span class="sym">A_s</span></span><a class="anchor" href="#scalar-amplitude">#scalar-amplitude</a></dt>
+          <dd>
+            <p>From the topological spectral action, <span class="val">S_top = 28.09</span> yields <em>λ_σ = e^(−S_top) ≈ 6.3 × 10⁻¹³</em> and hence <span class="val">A_s = 2.33 × 10⁻⁹</span>, within 11% of the observed <em>2.10 × 10⁻⁹</em>. The scalaron mass <em>m_σ = 7.92 × 10¹² GeV</em> and an inflationary epoch of ~45 e-folds follow from the same structure.</p>
           </dd>
         </div>
 
