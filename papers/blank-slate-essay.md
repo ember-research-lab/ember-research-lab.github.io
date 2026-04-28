@@ -1,7 +1,7 @@
 ---
 title: "The Blank Slate Is the Gift"
 subtitle: "Why the safest AI is the one that needs nothing from you"
-author: "Aaron Ben-Shalom · Ember Research Lab · April 2026"
+author: "Ember Research Lab · April 2026"
 mainfont: "Nimbus Sans"
 sansfont: "Nimbus Sans"
 monofont: "Nimbus Mono PS"
@@ -148,4 +148,4 @@ The blank slate is not the danger. It's the gift. The question is whether we're 
 
 *The full mathematical framework --- derivations, proofs, falsifiable predictions, and the connection to fundamental physics --- is available in the Spectral Physics monograph (Zenodo, DOI: [10.5281/zenodo.18961252](https://doi.org/10.5281/zenodo.18961252)). A focused treatment of the alignment application is in ["The Third Path: Emergent Alignment from Spectral Depth"](https://ember-research-lab.github.io/papers/third-path-v5.pdf) (v5 preprint).*
 
-*Aaron Ben-Shalom is a software engineer and independent researcher at Ember Research Lab, and an ALM candidate in Computer Science at Harvard Extension School. He developed the spectral self-referential framework over a multi-year research program, including extensive collaborative work with Claude (Anthropic). This essay is adapted from "The Third Path" (April 2026).*
+*Ember Research Lab is an independent research effort developing the spectral self-referential framework over a multi-year program, including extensive collaborative work with Claude (Anthropic). This essay is adapted from "The Third Path" (April 2026). Contact: emberresearchlab@gmail.com.*
