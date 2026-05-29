@@ -42,7 +42,7 @@
     "hasDefinedTerm": [
       { "@type": "DefinedTerm", "name": "Graph Laplacian", "description": "The unique self-adjoint, positive semi-definite, local operator on a weighted graph. Spectral physics takes L as the fundamental observable.", "url": "https://ember-research-lab.github.io/concepts.html#graph-laplacian" },
       { "@type": "DefinedTerm", "name": "Three projections", "description": "The three primitive operations on the Laplacian — heat kernel, propagator, trace — which respectively generate geometry, quantum mechanics, and self-reference.", "url": "https://ember-research-lab.github.io/concepts.html#three-projections" },
-      { "@type": "DefinedTerm", "name": "Ember Reconstruction Theorem", "description": "From three relational axioms, a unique spectral triple is forced: the algebra C ⊗ H ⊗ O, the Hilbert space of dimension 384, the spectral action with moments f₀ = τ and f₂ = 48e⁶, and the self-consistent vacuum k*. Extends Connes' reconstruction from geometry-from-spectrum to physics-from-axioms.", "url": "https://ember-research-lab.github.io/concepts.html#ember-reconstruction" },
+      { "@type": "DefinedTerm", "name": "Ember Reconstruction Theorem", "description": "From three relational axioms plus an anisotropic composition-norm co-primitive, a unique spectral triple is selected: the algebra C ⊗ H ⊗ O, the Hilbert space of dimension 384, the spectral action with moments f₀ = τ and f₂ = 48e⁶, and the self-consistent vacuum k*. Extends Connes' reconstruction from geometry-from-spectrum to physics-from-axioms.", "url": "https://ember-research-lab.github.io/concepts.html#ember-reconstruction" },
       { "@type": "DefinedTerm", "name": "Self-Consistent Spectral Equation", "description": "The master equation Φ(k*) = k*, closing the loop spectrum → zeta → moments → spectral action → SAGF → vacuum → Dirac operator → spectrum at a unique fixed point.", "url": "https://ember-research-lab.github.io/concepts.html#scse" },
       { "@type": "DefinedTerm", "name": "Spectral Action Gradient Flow", "description": "The flow k̇ = −δS_tot/δk selects the vacuum k* as the unique global attractor. No landscape; inflation is the nonlinear transient of SAGF convergence.", "url": "https://ember-research-lab.github.io/concepts.html#sagf" },
       { "@type": "DefinedTerm", "name": "Spectral consciousness index (C)", "description": "A scalar measure of how richly a system models itself and its environment, combining effective spectral rank, spectral range, and Gibbs entropy at the self-referential temperature τ = 1/(2+φ).", "url": "https://ember-research-lab.github.io/concepts.html#c-index" },
@@ -54,7 +54,7 @@
       { "@type": "DefinedTerm", "name": "QCD scale", "description": "Λ_QCD = 338 MeV, a 2% match, derived from α_s = π(2+φ)/96 with two-loop RG running. Inherits directly from the Ember Reconstruction.", "url": "https://ember-research-lab.github.io/concepts.html#lambda-qcd" },
       { "@type": "DefinedTerm", "name": "Yang-Mills mass gap", "description": "A corollary of the Ember Reconstruction Theorem: the gauge sector has spectral gap λ₁ > 0 by Cheeger's inequality on the compact A/G.", "url": "https://ember-research-lab.github.io/concepts.html#yang-mills" },
       { "@type": "DefinedTerm", "name": "Five dynamical sectors", "description": "The spectral action on M × F produces three gauge sectors (SU(3), SU(2), U(1)) and two metric sectors (spin-2 gravity and spin-0 conformal). Three forces plus two geometry — not four forces.", "url": "https://ember-research-lab.github.io/concepts.html#five-sectors" },
-      { "@type": "DefinedTerm", "name": "Cayley–Dickson tolerance", "description": "The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at C ⊗ H ⊗ O, fixing the Standard Model gauge group and κ_crit.", "url": "https://ember-research-lab.github.io/concepts.html#cayley-dickson" }
+      { "@type": "DefinedTerm", "name": "Cayley–Dickson tolerance", "description": "The algebraic closure requirement on a self-referential observation algebra selects termination of the Cayley–Dickson doubling tower at C ⊗ H ⊗ O, fixing the Standard Model gauge group and κ_crit.", "url": "https://ember-research-lab.github.io/concepts.html#cayley-dickson" }
     ]
   }
   </script>
@@ -603,7 +603,7 @@
         <div class="entry" id="ember-reconstruction">
           <dt><span class="term">Ember Reconstruction Theorem</span><a class="anchor" href="#ember-reconstruction">#ember-reconstruction</a></dt>
           <dd>
-            <p>The framework's capstone. From the three axioms alone, a unique spectral triple <em>(A_obs, H, D[k*])</em> is forced: the algebra <span class="val">A_obs = C ⊗ H ⊗ O</span>, the Hilbert space <span class="val">dim(H_F) = 384 = 96_vis + 288_hid</span>, the spectral action with cutoff moments f₀ = τ and f₂ = 48e⁶, and the self-consistent vacuum k* as the unique global attractor of the gradient flow.</p>
+            <p>The framework's capstone. From the three axioms together with an anisotropic composition-norm co-primitive, a unique spectral triple <em>(A_obs, H, D[k*])</em> is selected: the algebra <span class="val">A_obs = C ⊗ H ⊗ O</span>, the Hilbert space <span class="val">dim(H_F) = 384 = 96_vis + 288_hid</span>, the spectral action with cutoff moments f₀ = τ and f₂ = 48e⁶, and the self-consistent vacuum k* as the unique global attractor of the gradient flow.</p>
             <p>Extends Connes' reconstruction theorem: where Connes goes from spectral data to geometry, Ember goes from three relational axioms to the complete physical theory — geometry, gauge fields, matter content, coupling constants, vacuum, dynamics. Yang–Mills mass gap, five dynamical sectors, and the structural status of the cosmological constant are corollaries.</p>
           </dd>
         </div>
@@ -632,7 +632,7 @@
         <div class="entry" id="cayley-dickson">
           <dt><span class="term">Cayley–Dickson tolerance</span><a class="anchor" href="#cayley-dickson">#cayley-dickson</a></dt>
           <dd>
-            <p>The algebraic closure requirement on a self-referential observation algebra forces termination of the Cayley–Dickson doubling tower at <span class="val">C ⊗ H ⊗ O</span>. Each stage adds one "tolerance" — the small numerical slack that permits self-consistent doubling. The last compatible stage fixes the Standard Model gauge group <em>G = SU(3) × SU(2) × U(1)</em> (Hurwitz forbids a fourth gauge force) and determines the critical coupling <a href="#kappa-crit">κ_crit</a>.</p>
+            <p>The algebraic closure requirement on a self-referential observation algebra selects termination of the Cayley–Dickson doubling tower at <span class="val">C ⊗ H ⊗ O</span>. Each stage adds one "tolerance" — the small numerical slack that permits self-consistent doubling. The last compatible stage fixes the Standard Model gauge group <em>G = SU(3) × SU(2) × U(1)</em> (Hurwitz forbids a fourth gauge force) and determines the critical coupling <a href="#kappa-crit">κ_crit</a>.</p>
           </dd>
         </div>
 
@@ -769,7 +769,7 @@
         <div class="entry" id="three-generations">
           <dt><span class="term">Three fermion generations</span><a class="anchor" href="#three-generations">#three-generations</a></dt>
           <dd>
-            <p>The fermion content at k* is forced: <span class="val">dim(H_F) = 384 = 96_vis + 288_hid</span>, consisting of one Standard Model generation × three generations × J-pairing. The three-generation multiplicity is part of the framework's algebraic closure, not a free parameter.</p>
+            <p>The fermion content at k* is fixed by the closure ansatz: <span class="val">dim(H_F) = 384 = 96_vis + 288_hid</span>, consisting of one Standard Model generation × three generations × J-pairing. The three-generation multiplicity is part of the framework's algebraic closure, not a free parameter.</p>
           </dd>
         </div>
 
