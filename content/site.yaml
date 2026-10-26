@@ -1,0 +1,14 @@
+org: Ember Research Lab
+base_url: https://ember-research-lab.github.io
+concept_doi: 10.5281/zenodo.18946320
+contact: emberresearchlab@gmail.com
+max_review_age_days: 90
+pages:
+  - {slug: "", file: home.html, nav: Home, title: Ember Research Lab, reviewed: 2026-10-26}
+  - {slug: work, file: work.html, nav: Work, title: Work, reviewed: 2026-10-26}
+  - {slug: alignment, file: alignment.html, nav: Alignment, title: Alignment, reviewed: 2026-10-26}
+  - {slug: about, file: about.html, nav: About, title: About the lab, reviewed: 2026-10-26}
+software:
+  - {name: vetpkg, desc: "Supply-chain security proxy for npm, PyPI, and Cargo."}
+  - {name: ember-agent-monitor, desc: "Runtime observer for AI coding agents."}
+  - {name: ember-crypto, desc: "Shared signing, verification, and hashing crate."}

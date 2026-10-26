@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}{% if page.slug %} - {{ site.org }}{% endif %}</title>
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ site.org }}">
+<link rel="canonical" href="{{ site.base_url }}/{{ page.slug }}{% if page.slug %}/{% endif %}">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151413" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.org }}">
+<meta property="og:title" content="{{ page.title }}{% if page.slug %} - {{ site.org }}{% endif %}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.base_url }}/{{ page.slug }}{% if page.slug %}/{% endif %}">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg stroke='%23d9731f' fill='none' stroke-linecap='round'%3E%3Cpath d='M7 24L16 7' stroke-width='2.6'/%3E%3Cpath d='M16 7L26 21' stroke-width='1.4'/%3E%3Cpath d='M7 24L26 21' stroke-width='.8'/%3E%3C/g%3E%3Cg fill='%23d9731f'%3E%3Ccircle cx='7' cy='24' r='3'/%3E%3Ccircle cx='16' cy='7' r='3.6'/%3E%3Ccircle cx='26' cy='21' r='2.4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{{ jsonld }}</script>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><g stroke="currentColor" fill="none" stroke-linecap="round"><path d="M7 24L16 7" stroke-width="2.6"/><path d="M16 7L26 21" stroke-width="1.4"/><path d="M7 24L26 21" stroke-width="0.8"/></g><g fill="currentColor"><circle cx="7" cy="24" r="3"/><circle cx="16" cy="7" r="3.6"/><circle cx="26" cy="21" r="2.4"/></g></svg><span>{{ site.org }}</span></a>
+<nav aria-label="Main">{% for p in pages %}<a href="/{{ p.slug }}{% if p.slug %}/{% endif %}"{% if p.slug == page.slug %} aria-current="page"{% endif %}>{{ p.nav }}</a>{% endfor %}</nav>
+</div></header>
+<main class="wrap">
+{% block body %}{% endblock %}
+</main>
+<footer><div class="wrap">
+<p>{{ site.org }}. Independent research. Contact: <a href="mailto:{{ site.contact }}">{{ site.contact }}</a>. Text and research content CC BY 4.0.</p>
+
+</div></footer>
+</body>
+</html>
