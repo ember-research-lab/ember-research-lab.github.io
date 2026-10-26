@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block body %}
+<h1>Concepts</h1>
+<p>A glossary of the lab's terms. The status column says whether an entry is a plain definition, a ledger claim (linked, with its tier), a framework claim not rated here ("unrated"), or conjectural. Unrated means no tiered source line exists yet, so it should not be read as established.</p>
+<div class="tbl"><table><tr><th>Term</th><th>Meaning</th><th>Status</th></tr>
+{% for g in site.glossary %}<tr><td>{{ g.term }}</td><td>{{ g.def }}</td><td>{% if g.get('claim') %}<a href="/research/#{{ g.claim }}">ledger: <span class="tag">{{ claim_tier[g.claim] }}</span></a>{% else %}{{ g.status }}{% endif %}</td></tr>
+{% endfor %}</table></div>
+{% endblock %}

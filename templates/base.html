@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}{% if page.slug %} - {{ site.org }}{% endif %}</title>
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ site.org }}">
+<link rel="canonical" href="{{ site.base_url }}/{{ page.slug }}{% if page.slug %}/{% endif %}">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{{ jsonld }}</script>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="/">{{ site.org }}</a>
+<nav aria-label="Main">{% for p in pages %}<a href="/{{ p.slug }}{% if p.slug %}/{% endif %}"{% if p.slug == page.slug %} aria-current="page"{% endif %}>{{ p.nav }}</a>{% endfor %}</nav>
+</div></header>
+<main class="wrap">
+{% block body %}{% endblock %}
+</main>
+<footer><div class="wrap">
+<p>{{ site.org }}. Independent research. Contact: {{ site.contact }}. Text and research content CC BY 4.0.</p>
+<p>Page last reviewed {{ page.reviewed }}. Monograph {{ lean.version }} (as stated by the Lean repository README). Built {{ built }}.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block body %}
+<h1>Software</h1>
+<p>Public repositories of the lab. Scope is stated in each repository; this page makes no claim about their coverage or security guarantees beyond their own documentation. Other lab tooling is not public and is not described here.</p>
+<div class="tbl"><table><tr><th>Repository</th><th>Description (from the repository)</th></tr>
+{% for s in site.software %}<tr><td><a href="https://github.com/ember-research-lab/{{ s.name }}">{{ s.name }}</a></td><td>{{ s.desc }}</td></tr>{% endfor %}
+</table></div>
+<p>Organisation: <a href="https://github.com/ember-research-lab">github.com/ember-research-lab</a>. Licences are stated per repository; check the repository before reuse.</p>
+{% endblock %}

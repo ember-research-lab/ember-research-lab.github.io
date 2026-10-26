@@ -1,0 +1,18 @@
+name: build-and-check
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ${{ fromJSON(vars.CI_RUNS_ON) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require uv
+        run: command -v uv
+      # Gates inside build.py: claims ledger, staleness, link check, private-repo names, personal-identifier grep.
+      # The runner must provide ~/.config/ember-site/blocklist.txt (outside the repo) and an authenticated gh
+      # that can see private org repos; the build fails loudly if either is missing.
+      - name: Build and check
+        run: uv run build.py
