@@ -12,7 +12,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--serif);font
 main{flex:1 0 auto;width:100%}
 header,footer{flex:none}
 .lead{font-size:1.35rem;line-height:1.5;margin-bottom:1.2em}
-.wrap{max-width:40rem;margin:0 auto;padding:0 16px}
+.wrap{max-width:40rem;margin:0 auto;padding-left:16px;padding-right:16px}
 header .wrap{padding-top:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.2;letter-spacing:.005em;color:var(--fg);text-decoration:none}
 .brand svg{width:30px;height:30px;min-width:30px;flex:none;color:var(--acc);display:block}
@@ -46,5 +46,5 @@ pre{padding:12px 14px;overflow-x:auto;font-size:.85rem;line-height:1.55;border-l
 code{padding:0 3px;font-size:.9em}
 footer .wrap{padding-top:16px;padding-bottom:32px;border-top:1px solid var(--line);color:var(--mut);font-size:.875rem;line-height:1.55}
 footer p{margin:0}
-@media (min-width:40rem){body{font-size:1.1875rem}h1{font-size:2.5rem}.wrap{padding:0 24px}}
+@media (min-width:40rem){body{font-size:1.1875rem}h1{font-size:2.5rem}.wrap{padding-left:24px;padding-right:24px}}
 @media print{body{border-top:0;background:#fff;color:#000}nav{display:none}}
