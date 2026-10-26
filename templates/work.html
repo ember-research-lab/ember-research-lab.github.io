@@ -7,5 +7,5 @@
 </ul>
 {% include "cite.html" %}
 <h2>Software</h2>
-<ul>{% for s in site.software %}<li><a href="https://github.com/ember-research-lab/{{ s.name }}">{{ s.name }}</a>: {{ s.desc }}</li>{% endfor %}</ul>
+<dl class="defs">{% for s in site.software %}<dt><a href="https://github.com/ember-research-lab/{{ s.name }}">{{ s.name }}</a></dt><dd>{{ s.desc }}</dd>{% endfor %}</dl>
 {% endblock %}
