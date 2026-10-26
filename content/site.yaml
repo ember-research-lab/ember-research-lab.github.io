@@ -1,43 +1,13 @@
 org: Ember Research Lab
 base_url: https://ember-research-lab.github.io
 concept_doi: 10.5281/zenodo.18946320
-lean_repo: Spectral-Physics-Lean
-contact: CONTACT_TBD
+contact: emberresearchlab@gmail.com
 max_review_age_days: 90
 pages:
   - {slug: "", file: home.html, nav: Home, title: Ember Research Lab, reviewed: 2026-10-26}
-  - {slug: research, file: research.html, nav: Spectral physics, title: Spectral physics, reviewed: 2026-10-26}
-  - {slug: alignment, file: alignment.html, nav: Alignment, title: Alignment (conjectural), reviewed: 2026-10-26}
-  - {slug: software, file: software.html, nav: Software, title: Software, reviewed: 2026-10-26}
-  - {slug: concepts, file: concepts.html, nav: Concepts, title: Concepts, reviewed: 2026-10-26}
+  - {slug: work, file: work.html, nav: Work, title: Work, reviewed: 2026-10-26}
   - {slug: about, file: about.html, nav: About, title: About the lab, reviewed: 2026-10-26}
 software:
-  - {name: vetpkg, desc: "Zero-dependency supply-chain security proxy for npm, PyPI, and Cargo. Scores packages against attack patterns at install time."}
-  - {name: ember-agent-monitor, desc: "Runtime observer for AI coding agents. Zero-dependency Rust, with attack-pattern fixtures pinned in CI."}
-  - {name: ember-crypto, desc: "Shared sign, verify, and hash crate: Ed25519, ML-DSA (FIPS 204), and hybrid, behind a crypto-agility interface."}
-  - {name: ember-graph, desc: "Public repository; no description published yet."}
-  - {name: claude-cortex, desc: "Persistent memory for Claude Code across sessions."}
-glossary:
-  - {term: Graph Laplacian, def: "For a weighted graph, the operator L = D - W (degree minus weights). Self-adjoint and positive semi-definite; constants lie in its kernel. The framework takes L as the basic observable.", status: definition}
-  - {term: Spectral gap, def: "The smallest nonzero eigenvalue of L. Larger means the graph is more tightly connected.", status: definition, claim: lattice-gap}
-  - {term: Heat kernel, def: "exp(-tL): real exponentiation of L. Positivity-preserving and dissipative; the framework reads geometry from it.", status: definition}
-  - {term: Propagator, def: "exp(-itL): imaginary exponentiation of L. Unitary.", status: definition}
-  - {term: Trace, def: "Tr g(L) = sum of g over the eigenvalues; a global scalar that needs the whole spectrum. The framework calls it self-referential.", status: definition}
-  - {term: Three projections, def: "The heat kernel, the propagator, and the trace, as the framework's three primitive operations on L. That they generate the rest of the functional calculus is a framework claim, not rated here.", status: unrated}
-  - {term: Bakry-Emery condition, def: "A lower bound on graph curvature via the carre-du-champ calculus; implies a Lichnerowicz-type bound on the spectral gap.", status: definition, claim: bakry-emery}
-  - {term: Cayley-Dickson tower, def: "The doubling construction reals, complex, quaternions, octonions, and beyond.", status: definition, claim: cayley-dickson}
-  - {term: Self-referential closure (Axiom 3), def: "The posit that the system's observations can represent their own observations. A posit of the framework, not a theorem.", status: unrated}
-  - {term: Predicate hypothesis, def: "Open mathematical content carried as a named proposition P in theorems of the form P implies Q, so the theorem never asserts P itself.", status: definition}
-  - {term: Honest negative, def: "A result that a hypothesis fails or a route does not close, recorded as a theorem or table row rather than dropped.", status: definition}
-  - {term: C-kappa landscape, def: "The alignment preprint's proposed two-parameter description of self-modelling systems: modelling depth C and substrate coupling kappa. Neither is operationalised as a measurement yet.", status: conjectural}
-  - {term: "Host, stand-in, forget step", def: "For any claim about a physical object (host) computed on a simpler model (stand-in), the claim carries at most the tier of the forgetting step between them.", status: definition}
-tiers:
-  - {tag: T1, meaning: "Proved. In Lean: no sorry, and only mathlib's foundational axioms."}
-  - {tag: T2, meaning: "Proved conditional on cited, non-vacuous literature results."}
-  - {tag: T3, meaning: "Conjectural or posited. Nothing at T1 or T2 may rely on it."}
-  - {tag: T0, meaning: "Trivially true; a placeholder, not evidence."}
-  - {tag: "CLOSED / CONDITIONAL / OPEN / STOPPED", meaning: "Status words for a line of work: settled, settled given stated hypotheses, unresolved, abandoned with the reason recorded."}
-  - {tag: "NO / DEGENERATE", meaning: "Verdicts the Lean repository uses for negative results."}
-changelog:
-  - {date: 2026-10-26, text: "Site rebuilt as a generated site. Authorship is the lab. Counts and the monograph version are read from the Lean repository README at build time. Claims are listed in a ledger with tiers. Several earlier pages and claims were retired."}
-  - {date: 2026-05-28, text: "Last release of the previous hand-written site."}
+  - {name: vetpkg, desc: "Supply-chain security proxy for npm, PyPI, and Cargo."}
+  - {name: ember-agent-monitor, desc: "Runtime observer for AI coding agents."}
+  - {name: ember-crypto, desc: "Shared signing, verification, and hashing crate."}

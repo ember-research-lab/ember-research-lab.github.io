@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block body %}
+<h1>Work</h1>
+<h2>Published</h2>
+<ul>
+<li>Monograph, <em>Spectral Physics: A Unified Framework</em>, by concept DOI: <a href="https://doi.org/{{ site.concept_doi }}">{{ site.concept_doi }}</a>.</li>
+<li><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean">Spectral-Physics-Lean</a>: formalization of parts of the monograph; status in the repository.</li>
+</ul>
+{% include "cite.html" %}
+<h2>Software</h2>
+<ul>{% for s in site.software %}<li><a href="https://github.com/ember-research-lab/{{ s.name }}">{{ s.name }}</a>: {{ s.desc }}</li>{% endfor %}</ul>
+{% endblock %}

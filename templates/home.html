@@ -1,28 +1,5 @@
 {% extends "base.html" %}{% block body %}
 <h1>{{ site.org }}</h1>
-<p>We study what follows when a physical or cognitive system is modelled as a weighted graph whose basic observable is the graph Laplacian, and the system is allowed to model itself. Most of what we have is conditional or open, and every result on this site carries a tier: what is proved, what is conditional on named hypotheses, what is conjecture, and what failed.</p>
-<div class="note">Where the program stands on gravity: not reproduced. See the gravity rows in the <a href="/research/#ledger">ledger</a>.</div>
-
-<h2>Research lines</h2>
-<dl>
-<dt><a href="/research/">Spectral physics</a></dt>
-<dd>A monograph and a Lean 4 formalisation. Machine-checked core, honest negatives, and a claims ledger.</dd>
-<dt><a href="/alignment/">Alignment (conjectural)</a></dt>
-<dd>A preprint proposing a two-parameter picture of self-modelling systems. Conjecture throughout; not yet operationalised.</dd>
-<dt><a href="/software/">Software</a></dt>
-<dd>Public tools, chiefly in security.</dd>
-</dl>
-
-<h2>Current state</h2>
-<ul>
-<li>Lean formalisation: {{ lean.files }} files, {{ lean.sorry }} sorry sites, {{ lean.axioms }} axiom declarations (read from the <a href="{{ lean.url }}">repository README</a>, source revision {{ lean.rev }}, fetched {{ built }}).</li>
-<li>Monograph version as stated there: {{ lean.version }}.</li>
-<li>Ledger: {{ claims|length }} rows, {{ claims|selectattr('kind','equalto','negative')|list|length }} of them negative results.</li>
-</ul>
-
-<h2>Updates</h2>
-<ul>{% for c in site.changelog %}<li><strong>{{ c.date }}</strong>. {{ c.text }}</li>{% endfor %}</ul>
-
-<h2>Cite</h2>
-{% include "cite.html" %}
+<p>{{ site.org }} is an independent research group. It works on spectral methods on graphs, on systems that model themselves, and on security tooling for AI-agent infrastructure.</p>
+<p><a href="/work/">Work</a> &middot; <a href="/about/">About</a></p>
 {% endblock %}

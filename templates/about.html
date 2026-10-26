@@ -1,16 +1,8 @@
 {% extends "base.html" %}{% block body %}
 <h1>About the lab</h1>
-<p>{{ site.org }} is an independent research group. It is the only author of the work published here; there are no individual bios, and none will be added. Research and software are published under the lab's name, and GitHub activity under the <a href="https://github.com/ember-research-lab">lab organisation</a>.</p>
-
+<p>{{ site.org }} is the only author of the work published here.</p>
 <h2>Contact</h2>
-<p>{{ site.contact }} (a lab-owned address is pending). Until then, open an issue in the relevant public repository.</p>
-
-<h2>Licence</h2>
-<p>Text and research content are CC BY 4.0. Code licences are per repository.</p>
-
-<h2>How to cite</h2>
+<p><a href="mailto:{{ site.contact }}">{{ site.contact }}</a></p>
+<h2>Cite</h2>
 {% include "cite.html" %}
-
-<h2>Changelog</h2>
-<ul>{% for c in site.changelog %}<li><strong>{{ c.date }}</strong>. {{ c.text }}</li>{% endfor %}</ul>
 {% endblock %}
