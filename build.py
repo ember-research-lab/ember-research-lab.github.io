@@ -48,6 +48,7 @@ def render(site: dict, out: Path) -> None:
     built = dt.date.today().isoformat()
     descs = {"": "Ember Research Lab: independent research.",
              "work": "Published work and public software.",
+             "alignment": "The lab's position on alignment and self-modeling systems.",
              "about": "The lab, contact, how to cite."}
     jsonld = json.dumps({"@context": "https://schema.org", "@type": "ResearchOrganization",
                          "name": site["org"], "url": site["base_url"]})
