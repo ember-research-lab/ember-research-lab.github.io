@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectral physics - Ember Research Lab</title>
+<meta name="description" content="Spectral physics: monograph, Lean formalisation counts, tiers, claims ledger.">
+<meta name="author" content="Ember Research Lab">
+<link rel="canonical" href="https://ember-research-lab.github.io/research/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{&#34;@context&#34;: &#34;https://schema.org&#34;, &#34;@type&#34;: &#34;ResearchOrganization&#34;, &#34;name&#34;: &#34;Ember Research Lab&#34;, &#34;url&#34;: &#34;https://ember-research-lab.github.io&#34;}</script>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="/">Ember Research Lab</a>
+<nav aria-label="Main"><a href="/">Home</a><a href="/research/" aria-current="page">Spectral physics</a><a href="/alignment/">Alignment</a><a href="/software/">Software</a><a href="/concepts/">Concepts</a><a href="/about/">About</a></nav>
+</div></header>
+<main class="wrap">
+
+<h1>Spectral physics</h1>
+<p>The program asks how much of geometry, quantum mechanics and self-reference can be read off one object: a weighted graph with its Laplacian. Three posits start it: a relational structure with a Laplacian observable (Axiom 1), self-adjoint, positive semi-definite and local dynamics (Axiom 2), and self-referential closure (Axiom 3). They are posits, not results. For any claim about a physical host computed on a simpler stand-in, the claim carries at most the tier of the forgetting step between them; nothing on this page is rated at a higher tier than its ledger row.</p>
+
+<h2>Monograph and formalisation</h2>
+<ul>
+<li>Monograph version as stated by the Lean README: <strong>v1.0</strong>. Archive: <a href="https://doi.org/10.5281/zenodo.18946320">concept DOI 10.5281/zenodo.18946320</a> (may lag the current version).</li>
+<li>Source: <a href="https://github.com/ember-research-lab/Spectral-Physics">Spectral-Physics</a>. Lean 4 formalisation: <a href="https://github.com/ember-research-lab/Spectral-Physics-Lean">Spectral-Physics-Lean</a>.</li>
+<li>Generated counts, from the README at revision 2b7278233 (2026-09-07), fetched 2026-10-26: 259 Lean files, 45 top-level modules, 14 sorry sites, 123 axiom declarations. Last full build pass stated there: 2026-05-26. An axiom declaration is not an error: T2 results rest on named, cited axioms.</li>
+</ul>
+
+<h2 id="tiers">Tiers</h2>
+<div class="tbl"><table><tr><th>Tag</th><th>Meaning</th></tr>
+<tr><td><span class="tag">T1</span></td><td>Proved. In Lean: no sorry, and only mathlib&#39;s foundational axioms.</td></tr><tr><td><span class="tag">T2</span></td><td>Proved conditional on cited, non-vacuous literature results.</td></tr><tr><td><span class="tag">T3</span></td><td>Conjectural or posited. Nothing at T1 or T2 may rely on it.</td></tr><tr><td><span class="tag">T0</span></td><td>Trivially true; a placeholder, not evidence.</td></tr><tr><td><span class="tag">CLOSED / CONDITIONAL / OPEN / STOPPED</span></td><td>Status words for a line of work: settled, settled given stated hypotheses, unresolved, abandoned with the reason recorded.</td></tr><tr><td><span class="tag">NO / DEGENERATE</span></td><td>Verdicts the Lean repository uses for negative results.</td></tr></table></div>
+<p>"Derives" and "predicts" are used only at T1 or T2. A conditional claim "X given H" is tagged twice: the implication at the tier its proof earns, and X itself at T3 when H is a framework hypothesis.</p>
+
+<h2 id="ledger">Claims ledger</h2>
+<p>Each row quotes its source line; the build fails if the quote is missing or the tier does not match. Numerical matches to measurements are deliberately omitted: this ledger does not yet record, for them, what was fitted, how many parameters were free, or whether the comparison was post hoc, so they cannot be shown as predictions.</p>
+<div class="tbl"><table>
+<tr><th>Claim</th><th>Tier</th><th>Status</th><th>Source</th></tr>
+<tr id="lattice-gap"><td>Lattice spectral gap: lambda_1 &gt; 0 for a connected nonnegative Laplacian; kernel = constants.</td><td><span class="tag">T1</span></td><td>Proved in Lean, no sorry.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**Lattice spectral gap**</code></td></tr>
+<tr id="bakry-emery"><td>Bakry-Emery curvature-dimension condition on graphs and the discrete Lichnerowicz bound.</td><td><span class="tag">T1</span></td><td>Proved in Lean, no sorry.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**Bakry-Émery on graphs**</code></td></tr>
+<tr id="cheeger-colding"><td>Spectral-gap convergence under refinement in the antitone, bounded setting.</td><td><span class="tag">T1</span></td><td>Proved in Lean, no sorry.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**Cheeger-Colding convergence**</code></td></tr>
+<tr id="cayley-dickson"><td>Cayley-Dickson tower from the reals to the octonions, with norm-multiplicativity.</td><td><span class="tag">T1</span></td><td>Proved in Lean, no sorry.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**Cayley-Dickson tower**</code></td></tr>
+<tr id="continuum-gap"><td>Continuum Yang-Mills mass gap bound, given an antitone hypothesis on lattice eigenvalues and cited (unformalised) standard results.</td><td><span class="tag">T2</span></td><td>Conditional; the hypothesis is not proved. This is not a solution of the Clay problem.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**Continuum mass gap**</code></td></tr>
+<tr id="wightman"><td>A Wightman quantum field theory with a mass gap is NOT constructed: the Wightman distributions are a placeholder (sorry). <em>(negative result)</em></td><td><span class="tag">T3</span></td><td>Scaffolding only; the Clay goal theorem is unproved.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**Wightman distributions**</code></td></tr>
+<tr id="gr-spacetime-formal"><td>General relativity and spacetime in the formalisation are placeholder theorems, not derivations. <em>(gravity row)</em></td><td><span class="tag">T3</span></td><td>Scaffolding only.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>**GR / Spacetime**</code></td></tr>
+<tr id="gravity-even"><td>Gravity row, even (orientation-free) face: the program&#39;s reading of how gravity enters, via Jacobson- and Connes-type arguments. <em>(gravity row)</em></td><td><span class="tag">CONDITIONAL</span></td><td>Conditional on the cited arguments and framework hypotheses; not a derivation of gravity.</td><td>Lab rigor protocol, rule 13: <code>even face CONDITIONAL (Jacobson / Connes, orientation-free)</code></td></tr>
+<tr id="gravity-odd"><td>Gravity row, odd (orientation-carrying) face: only a single clock bit is identified; no gravitational dynamics follows from it. <em>(gravity row)</em></td><td><span class="tag">OPEN</span></td><td>Open.</td><td>Lab rigor protocol, rule 13: <code>odd face OPEN (the clock bit only)</code></td></tr>
+<tr id="kappa2-recipe"><td>A closed-form perturbative recipe for the vacuum-energy parameter kappa_2 from an earlier manuscript draft is falsified at theorem level. <em>(negative result)</em></td><td><span class="tag">CONDITIONAL</span></td><td>Falsification recorded in Lean; the structural fixed-point route is untested.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>`kappa2Full canonical ≠ 258`</code></td></tr>
+<tr id="capacity-posit"><td>The hidden-sector capacity value 288 is a posit (H4), not derived. <em>(negative result)</em></td><td><span class="tag">T3</span></td><td>Posit; the conditional implication is a separate, proved statement.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>Manuscript H4 (`CapacityPosit288`) is a Tier-3 posit, not derived.</code></td></tr>
+<tr id="dixon-order-one"><td>Dixon-algebra spectral triple: the order-one condition fails (non-associativity obstruction). <em>(negative result)</em></td><td><span class="tag">NO</span></td><td>Negative result, proved in Lean.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>| `DixonOrderOne` |</code></td></tr>
+<tr id="axiom3-hurwitz"><td>Axiom 3 alone does not force the division-algebra (Hurwitz) tower: the split-complex numbers are a counterexample. <em>(negative result)</em></td><td><span class="tag">NO</span></td><td>Negative result with counterexample; an extra composition-norm hypothesis is needed.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>| `RMForcesDivisionAlgebras` |</code></td></tr>
+<tr id="yr-zetaF"><td>One of five routes to derive the right-handed neutrino Yukawa (zeta-function regularisation) is degenerate; none of the five closed. <em>(negative result)</em></td><td><span class="tag">DEGENERATE</span></td><td>Negative result; the quantity is carried as an initial condition, not derived.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>| ζ_F-regularization |</code></td></tr>
+<tr id="cosmic-energy"><td>Cosmic energy-budget relations from the framework; the dark-energy fraction is a closure residual, not an independent prediction. No numeric match is claimed here.</td><td><span class="tag">T3</span></td><td>Conjectural.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>`Predictions/CosmicEnergy`</code></td></tr>
+<tr id="hubble"><td>A scale-dependent measurement effect that could account for part of the Hubble tension; a mechanism sketch, explicitly not a resolution. Its coupling parameter is a fit.</td><td><span class="tag">T3</span></td><td>Partial, mechanism only.</td><td><a href="https://github.com/ember-research-lab/Spectral-Physics-Lean/blob/main/README.md">Lean README</a>: <code>`Cosmology/HubbleTension`</code></td></tr>
+</table></div>
+
+<h2 id="gravity">What the program does not yet reproduce</h2>
+<p>Any unification claim should open with one question: where is gravity in this picture, and at what tier. Ours: the orientation-free face is CONDITIONAL on cited arguments and framework hypotheses; the orientation-carrying face is OPEN, with only a single clock bit identified. In the formalisation, spacetime and general relativity are placeholder theorems. A construction that reproduced some gauge structure or constants but not gravity would be incomplete however close its numbers; this applies to us. No single group is assumed to contain both the Standard Model and gravity, so an embedding would not count as a pass.</p>
+<p>Also not established: a Yang-Mills mass gap in the Clay sense (the ledger shows what is conditional and what is placeholder), the cosmological-constant magnitude, and the values of several parameters that the monograph treats as inputs.</p>
+
+</main>
+<footer><div class="wrap">
+<p>Ember Research Lab. Independent research. Contact: CONTACT_TBD. Text and research content CC BY 4.0.</p>
+<p>Page last reviewed 2026-10-26. Monograph v1.0 (as stated by the Lean repository README). Built 2026-10-26.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% block body %}
+<h1>Spectral physics</h1>
+<p>The program asks how much of geometry, quantum mechanics and self-reference can be read off one object: a weighted graph with its Laplacian. Three posits start it: a relational structure with a Laplacian observable (Axiom 1), self-adjoint, positive semi-definite and local dynamics (Axiom 2), and self-referential closure (Axiom 3). They are posits, not results. For any claim about a physical host computed on a simpler stand-in, the claim carries at most the tier of the forgetting step between them; nothing on this page is rated at a higher tier than its ledger row.</p>
+
+<h2>Monograph and formalisation</h2>
+<ul>
+<li>Monograph version as stated by the Lean README: <strong>{{ lean.version }}</strong>. Archive: <a href="https://doi.org/{{ site.concept_doi }}">concept DOI {{ site.concept_doi }}</a> (may lag the current version).</li>
+<li>Source: <a href="https://github.com/ember-research-lab/Spectral-Physics">Spectral-Physics</a>. Lean 4 formalisation: <a href="https://github.com/ember-research-lab/{{ site.lean_repo }}">{{ site.lean_repo }}</a>.</li>
+<li>Generated counts, from the README at revision {{ lean.rev }} ({{ lean.rev_date }}), fetched {{ built }}: {{ lean.files }} Lean files, {{ lean.modules }} top-level modules, {{ lean.sorry }} sorry sites, {{ lean.axioms }} axiom declarations. Last full build pass stated there: {{ lean.build_date }}. An axiom declaration is not an error: T2 results rest on named, cited axioms.</li>
+</ul>
+
+<h2 id="tiers">Tiers</h2>
+<div class="tbl"><table><tr><th>Tag</th><th>Meaning</th></tr>
+{% for t in site.tiers %}<tr><td><span class="tag">{{ t.tag }}</span></td><td>{{ t.meaning }}</td></tr>{% endfor %}</table></div>
+<p>"Derives" and "predicts" are used only at T1 or T2. A conditional claim "X given H" is tagged twice: the implication at the tier its proof earns, and X itself at T3 when H is a framework hypothesis.</p>
+
+<h2 id="ledger">Claims ledger</h2>
+<p>Each row quotes its source line; the build fails if the quote is missing or the tier does not match. Numerical matches to measurements are deliberately omitted: this ledger does not yet record, for them, what was fitted, how many parameters were free, or whether the comparison was post hoc, so they cannot be shown as predictions.</p>
+<div class="tbl"><table>
+<tr><th>Claim</th><th>Tier</th><th>Status</th><th>Source</th></tr>
+{% for c in claims %}<tr id="{{ c.id }}"><td>{{ c.claim }}{% if c.kind == 'gravity' %} <em>(gravity row)</em>{% elif c.kind == 'negative' %} <em>(negative result)</em>{% endif %}</td><td><span class="tag">{{ c.tier }}</span></td><td>{{ c.status }}</td><td>{% if c.source.ref == 'lean_readme' %}<a href="{{ lean.url }}">Lean README</a>{% else %}Lab rigor protocol, rule 13{% endif %}: <code>{{ c.source.quote }}</code></td></tr>
+{% endfor %}</table></div>
+
+<h2 id="gravity">What the program does not yet reproduce</h2>
+<p>Any unification claim should open with one question: where is gravity in this picture, and at what tier. Ours: the orientation-free face is CONDITIONAL on cited arguments and framework hypotheses; the orientation-carrying face is OPEN, with only a single clock bit identified. In the formalisation, spacetime and general relativity are placeholder theorems. A construction that reproduced some gauge structure or constants but not gravity would be incomplete however close its numbers; this applies to us. No single group is assumed to contain both the Standard Model and gravity, so an embedding would not count as a pass.</p>
+<p>Also not established: a Yang-Mills mass gap in the Clay sense (the ledger shows what is conditional and what is placeholder), the cosmological-constant magnitude, and the values of several parameters that the monograph treats as inputs.</p>
+{% endblock %}

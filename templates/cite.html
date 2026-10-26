@@ -1,0 +1,11 @@
+<p>Cite the monograph by its concept DOI, which always resolves to the latest archived version:</p>
+<pre>{{ site.org }}. Spectral Physics: A Unified Framework. Zenodo.
+https://doi.org/{{ site.concept_doi }}</pre>
+<pre>@misc{emberlab_spectral,
+  author = {{ '{' }}{{ site.org }}{{ '}' }},
+  title  = {Spectral Physics: A Unified Framework},
+  year   = {2026},
+  doi    = {{ '{' }}{{ site.concept_doi }}{{ '}' }},
+  publisher = {Zenodo}
+}</pre>
+<p>The archived versions at that DOI may lag the current monograph version.</p>
